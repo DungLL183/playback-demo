@@ -8,12 +8,12 @@ pipeline{
             steps{
                 sh 'mvn clean package'
             }
-            post{
-                success{
-                    echo "Archiving the artifacts"
-                    archiveArtifacts artifacts: '**/target/*.war'
-                }
-            }
+//             post{
+//                 success{
+//                     echo "Archiving the artifacts"
+//                     archiveArtifacts artifacts: '**/target/*.war'
+//                 }
+//             }
         }
         // stage("clone"){
         //     steps{
